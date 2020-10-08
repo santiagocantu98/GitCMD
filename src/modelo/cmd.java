@@ -39,7 +39,11 @@ public class cmd implements Runnable {
             Process p = r.exec("cmd /c" + "cd " + ruta +" && " + comando + " " + query);
             InputStreamReader entrada = new InputStreamReader(p.getInputStream());
             BufferedReader cmdInput = new BufferedReader(entrada);
-            System.out.println(cmdInput.readLine());
+            
+            //Leer error
+            InputStreamReader  error = new InputStreamReader(p.getErrorStream());
+            BufferedReader cmdError = new BufferedReader(error);
+            //System.out.println(cmdInput.readLine());
             //mostramos la salida del comando
             while ((salida = cmdInput.readLine()) != null) {
                 controladorFromPrincipal.fp.txtArea.append("\n " + i + ">  " + salida);
@@ -47,8 +51,24 @@ public class cmd implements Runnable {
                 //System.out.println(i + " " + salida);
                 i++;
             }
+            //resetear salida
+            boolean flag = false;
+            i = 1;
+            while ((salida = cmdError.readLine()) != null) {
+                if(flag == false){
+                     controladorFromPrincipal.fp.txtArea.append("\n Ha fallado el comando ' " + comando +" "+query+" '");
+                     flag = true;
+                }
+                controladorFromPrincipal.fp.txtArea.append("\n " + i + ">  " + salida);
+                controladorFromPrincipal.fp.txtArea.setCaretPosition(controladorFromPrincipal.fp.txtArea.getDocument().getLength());
+                //System.out.println(i + " " + salida);
+                i++;
+            }
+            
+            
         } catch (IOException ex) {
             ex.getStackTrace();
+             controladorFromPrincipal.fp.txtArea.append("\n El comando ha falldo" );
         }
     }
 }
