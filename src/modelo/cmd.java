@@ -39,6 +39,7 @@ public class cmd implements Runnable {
             Process p = r.exec("cmd /c" + "cd " + ruta +" && " + comando + " " + query);
             InputStreamReader entrada = new InputStreamReader(p.getInputStream());
             BufferedReader cmdInput = new BufferedReader(entrada);
+            System.out.println(cmdInput.readLine());
             //mostramos la salida del comando
             while ((salida = cmdInput.readLine()) != null) {
                 controladorFromPrincipal.fp.txtArea.append("\n " + i + ">  " + salida);

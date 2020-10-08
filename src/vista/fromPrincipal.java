@@ -55,9 +55,7 @@ public class fromPrincipal extends javax.swing.JFrame {
         txtArea.setRows(5);
         jScrollPane1.setViewportView(txtArea);
 
-        txtQuery.setBackground(new java.awt.Color(255, 255, 255));
         txtQuery.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        txtQuery.setForeground(new java.awt.Color(0, 0, 0));
 
         btnEjecutar.setText("Ejecutar");
         btnEjecutar.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +64,7 @@ public class fromPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "git config --global user.email ", "git clone ", "git commit –m ", "git push  origin ", "command git checkout -b ", "git branch", "git branch -d ", "git pull", "git merge ", "git diff --base ", "git rm ", "git checkout" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "git config --global user.email ", "git clone ", "git commit –m ", "git push  origin ", "git checkout -b ", "git branch", "git branch -d ", "git pull", "git merge ", "git diff --base ", "git rm ", "git checkout", "git init" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -112,7 +110,7 @@ public class fromPrincipal extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("git config --global user.email exmple@google.com\ngit clone exmple@93.188.160.58:/path/to/repository\ngit commit –m “Message to go with the commit here”\ngit push  origin <branch>\ncommand git checkout -b <branch-name>\ngit branch\ngit branch -d <branch-name>\ngit pull\ngit merge <branch-name>\ngit diff --base <file-name>\ngit rm filename.txt\n");
+        jTextArea1.setText("git config --global user.email exmple@google.com\ngit clone exmple@93.188.160.58:/path/to/repository\ngit commit –m “Message to go with the commit here”\ngit push  origin <branch>\ngit checkout -b <branch-name>\ngit branch\ngit branch -d <branch-name>\ngit pull\ngit merge <branch-name>\ngit diff --base <file-name>\ngit rm filename.txt\ngit init\n");
         jScrollPane2.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
