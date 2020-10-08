@@ -48,16 +48,16 @@ public class fromPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtArea.setBackground(new java.awt.Color(51, 51, 51));
+        txtArea.setBackground(new java.awt.Color(0, 0, 0));
         txtArea.setColumns(20);
         txtArea.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        txtArea.setForeground(new java.awt.Color(0, 102, 0));
+        txtArea.setForeground(new java.awt.Color(255, 255, 255));
         txtArea.setRows(5);
         jScrollPane1.setViewportView(txtArea);
 
-        txtQuery.setBackground(new java.awt.Color(51, 51, 51));
+        txtQuery.setBackground(new java.awt.Color(255, 255, 255));
         txtQuery.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        txtQuery.setForeground(new java.awt.Color(255, 102, 0));
+        txtQuery.setForeground(new java.awt.Color(0, 0, 0));
 
         btnEjecutar.setText("Ejecutar");
         btnEjecutar.addActionListener(new java.awt.event.ActionListener() {
