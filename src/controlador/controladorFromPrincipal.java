@@ -34,8 +34,10 @@ public class controladorFromPrincipal implements ActionListener {
             if (fp.txtQuery.getText().equals("lol")) {
                 JOptionPane.showMessageDialog(null, "Error no se permiten valores nulos!", "Error", 0);
             } else {
+                
                 cmd c = new cmd(ruta,"");
                 c.getLine(this.fp.txtQuery.getText());
+                fp.txtQuery.setText("");
             }
         }
     }

@@ -66,7 +66,7 @@ public class fromPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "git config --global user.email ", "git clone ", "git commit –m ", "git push  origin ", "command git checkout -b ", "git branch", "git branch -d ", "git pull", "git merge ", "git diff --base ", "git rm ", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "git config --global user.email ", "git clone ", "git commit –m ", "git push  origin ", "command git checkout -b ", "git branch", "git branch -d ", "git pull", "git merge ", "git diff --base ", "git rm ", "git checkout" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -196,7 +196,7 @@ public class fromPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnEjecutar;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

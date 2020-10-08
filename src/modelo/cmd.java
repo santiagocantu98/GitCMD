@@ -19,6 +19,7 @@ public class cmd implements Runnable {
     public cmd(String ruta,String comando) {
         this.ruta = ruta;
         this.comando = comando;
+        this.comando = (String)controladorFromPrincipal.fp.jComboBox1.getSelectedItem();
         Thread hilo = new Thread(this);
         hilo.start();
         controladorFromPrincipal.fp.txtRuta.setText(this.ruta);
