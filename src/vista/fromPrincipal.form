@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea2">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -237,6 +254,7 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
+                    <Property name="text" type="java.lang.String" value="git config --global user.email exmple@google.com&#xa;git clone exmple@93.188.160.58:/path/to/repository&#xa;git commit &#x2013;m &#x201c;Message to go with the commit here&#x201d;&#xa;git push  origin &lt;branch&gt;&#xa;command git checkout -b &lt;branch-name&gt;&#xa;git branch&#xa;git branch -d &lt;branch-name&gt;&#xa;git pull&#xa;git merge &lt;branch-name&gt;&#xa;git diff --base &lt;file-name&gt;&#xa;git rm filename.txt&#xa;"/>
                   </Properties>
                 </Component>
               </SubComponents>
