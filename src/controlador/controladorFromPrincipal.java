@@ -31,10 +31,10 @@ public class controladorFromPrincipal implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(this.fp.btnEjecutar)) {
             fp.txtArea.setText("");
-            if (fp.txtQuery.getText().equals("")) {
+            if (fp.txtQuery.getText().equals("lol")) {
                 JOptionPane.showMessageDialog(null, "Error no se permiten valores nulos!", "Error", 0);
             } else {
-                cmd c = new cmd(ruta);
+                cmd c = new cmd(ruta,"git ");
                 c.getLine(this.fp.txtQuery.getText());
             }
         }
