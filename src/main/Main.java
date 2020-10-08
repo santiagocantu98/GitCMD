@@ -10,8 +10,9 @@ import vista.fromPrincipal;
 public class Main {
 
     public static void main(String[] args) {
-        fromPrincipal fp = new fromPrincipal();
-        controladorFromPrincipal cp = new controladorFromPrincipal(fp);
+        
+         new Ruta().setVisible(true);
+                 
     }
 
 }

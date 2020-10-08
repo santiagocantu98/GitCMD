@@ -13,9 +13,11 @@ import vista.fromPrincipal;
 public class controladorFromPrincipal implements ActionListener {
 
     public static fromPrincipal fp = null;
+    private static String ruta;
 
-    public controladorFromPrincipal(fromPrincipal fp) {
+    public controladorFromPrincipal(fromPrincipal fp,String ruta) {
         this.fp = fp;
+        this.ruta = ruta;
         inicializar();
     }
 
@@ -32,7 +34,7 @@ public class controladorFromPrincipal implements ActionListener {
             if (fp.txtQuery.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Error no se permiten valores nulos!", "Error", 0);
             } else {
-                cmd c = new cmd();
+                cmd c = new cmd(ruta);
                 c.getLine(this.fp.txtQuery.getText());
             }
         }

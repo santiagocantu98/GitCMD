@@ -16,8 +16,15 @@ public class fromPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form fromPrincipal
      */
-    public fromPrincipal() {
+
+    private String ruta;
+    
+    public fromPrincipal(String ruta) {
+        //getContentPane().setBackground(Color.DARK_GRAY);
+        this.ruta = ruta;
+
         initComponents();
+        this.txtRuta.setText(ruta);
     }
 
     /**
@@ -36,15 +43,20 @@ public class fromPrincipal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtArea = new javax.swing.JTextArea();
         txtQuery = new javax.swing.JTextField();
+
+        txtRuta = new javax.swing.JLabel();
+
         btnEjecutar = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
 
+
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jScrollPane3.setViewportView(jTextArea2);
+
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -129,21 +141,51 @@ public class fromPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Ayuda", jPanel2);
 
+        txtRuta.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
+
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtQuery)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnEjecutar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+
                 .addComponent(jTabbedPane1)
+
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
+            .addGroup(layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(txtRuta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtQuery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEjecutar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
+
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
+
         );
 
         pack();
@@ -187,7 +229,7 @@ public class fromPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new fromPrincipal().setVisible(true);
+                new fromPrincipal("ruta").setVisible(true);
             }
         });
     }
@@ -205,5 +247,6 @@ public class fromPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea2;
     public javax.swing.JTextArea txtArea;
     public javax.swing.JTextField txtQuery;
+    public javax.swing.JLabel txtRuta;
     // End of variables declaration//GEN-END:variables
 }
