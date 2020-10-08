@@ -13,10 +13,13 @@ public class cmd implements Runnable {
 
     private static String query;
     private static boolean control = false;
+    private static String ruta;
 
-    public cmd() {
+    public cmd(String ruta) {
+        this.ruta = ruta;
         Thread hilo = new Thread(this);
         hilo.start();
+        controladorFromPrincipal.fp.txtRuta.setText(this.ruta);
     }
 
     public void getLine(String query) {
@@ -31,7 +34,7 @@ public class cmd implements Runnable {
             String salida = null;
             int i = 1;
             try {
-                Process p = r.exec("cmd /c " + query);
+                Process p = r.exec("cmd /c " + "cd " + ruta+" && " + query);
                 InputStreamReader entrada = new InputStreamReader(p.getInputStream());
                 BufferedReader cmdInput = new BufferedReader(entrada);
                 //mostramos la salida del comando

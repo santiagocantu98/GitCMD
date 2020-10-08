@@ -16,9 +16,13 @@ public class fromPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form fromPrincipal
      */
-    public fromPrincipal() {
-        getContentPane().setBackground(Color.DARK_GRAY);
+    private String ruta;
+    
+    public fromPrincipal(String ruta) {
+        //getContentPane().setBackground(Color.DARK_GRAY);
+        this.ruta = ruta;
         initComponents();
+        this.txtRuta.setText(ruta);
     }
 
     /**
@@ -35,6 +39,7 @@ public class fromPrincipal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtArea = new javax.swing.JTextArea();
         txtQuery = new javax.swing.JTextField();
+        txtRuta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,6 +64,8 @@ public class fromPrincipal extends javax.swing.JFrame {
         txtQuery.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtQuery.setForeground(new java.awt.Color(255, 102, 0));
 
+        txtRuta.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -72,20 +79,25 @@ public class fromPrincipal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtQuery)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnEjecutar)))
+                        .addComponent(btnEjecutar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(11, 11, 11)
+                .addComponent(txtRuta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtQuery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEjecutar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -125,7 +137,7 @@ public class fromPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new fromPrincipal().setVisible(true);
+                new fromPrincipal("ruta").setVisible(true);
             }
         });
     }
@@ -136,5 +148,6 @@ public class fromPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTextArea txtArea;
     public javax.swing.JTextField txtQuery;
+    public javax.swing.JLabel txtRuta;
     // End of variables declaration//GEN-END:variables
 }
