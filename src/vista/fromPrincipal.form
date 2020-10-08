@@ -192,14 +192,14 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane2" alignment="0" pref="468" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" alignment="0" pref="477" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" pref="316" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" pref="311" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -217,7 +217,7 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="git config --global user.email exmple@google.com&#xa;git clone exmple@93.188.160.58:/path/to/repository&#xa;git commit &#x2013;m &#x201c;Message to go with the commit here&#x201d;&#xa;git push  origin &lt;branch&gt;&#xa;git checkout -b &lt;branch-name&gt;&#xa;git branch&#xa;git branch -d &lt;branch-name&gt;&#xa;git pull&#xa;git merge &lt;branch-name&gt;&#xa;git diff --base &lt;file-name&gt;&#xa;git rm filename.txt&#xa;git init&#xa;"/>
+                    <Property name="text" type="java.lang.String" value="# Set an email address in Git.&#xa;git config --global user.email exmple@google.com&#xa;&#xa;# Clone a repository with git clone &lt;url&gt; to your local repository.&#xa;git clone exmple@93.188.160.58:/path/to/repository&#xa;&#xa;# Save your changes to the local repository.&#xa;git commit &#x2013;m &#x201c;Message to go with the commit here&#x201d;&#xa;&#xa;# In order to push a Git branch to remote&#xa;git push  origin &lt;branch&gt;&#xa;&#xa;# Create new branch off the current one and switch to it.&#xa;git checkout -b &lt;branch-name&gt;&#xa;&#xa;# Shows all the existing branches&#xa;git branch&#xa;&#xa;# Deletes the branch selected&#xa;git branch -d &lt;branch-name&gt;&#xa;&#xa;# Pull from remote branch to current branch&#xa;git pull&#xa;&#xa;# Merge commits of other branch into the current one&#xa;git merge &lt;branch-name&gt;&#xa;&#xa;# Show changes between commits, commit and working tree&#xa;git diff --base &lt;file-name&gt;&#xa;&#xa;# Remove a file from git&#xa;git rm filename.txt&#xa;&#xa;# Create a clean git repo in this directory&#xa;git init&#xa;"/>
                   </Properties>
                 </Component>
               </SubComponents>

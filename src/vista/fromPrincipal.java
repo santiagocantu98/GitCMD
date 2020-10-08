@@ -110,20 +110,20 @@ public class fromPrincipal extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("git config --global user.email exmple@google.com\ngit clone exmple@93.188.160.58:/path/to/repository\ngit commit –m “Message to go with the commit here”\ngit push  origin <branch>\ngit checkout -b <branch-name>\ngit branch\ngit branch -d <branch-name>\ngit pull\ngit merge <branch-name>\ngit diff --base <file-name>\ngit rm filename.txt\ngit init\n");
+        jTextArea1.setText("# Set an email address in Git.\ngit config --global user.email exmple@google.com\n\n# Clone a repository with git clone <url> to your local repository.\ngit clone exmple@93.188.160.58:/path/to/repository\n\n# Save your changes to the local repository.\ngit commit –m “Message to go with the commit here”\n\n# In order to push a Git branch to remote\ngit push  origin <branch>\n\n# Create new branch off the current one and switch to it.\ngit checkout -b <branch-name>\n\n# Shows all the existing branches\ngit branch\n\n# Deletes the branch selected\ngit branch -d <branch-name>\n\n# Pull from remote branch to current branch\ngit pull\n\n# Merge commits of other branch into the current one\ngit merge <branch-name>\n\n# Show changes between commits, commit and working tree\ngit diff --base <file-name>\n\n# Remove a file from git\ngit rm filename.txt\n\n# Create a clean git repo in this directory\ngit init\n");
         jScrollPane2.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 477, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
